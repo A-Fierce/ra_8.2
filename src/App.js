@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ComponentData from "./components/ComponentData";
+import ComponentError from "./components/ComponentError";
+import ComponentLoading from "./components/ComponentLoading";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p className="note">
+        Запустите сервер из папки backend
+      </p>
+      <ComponentLoading suffix="loading" />
+      <ComponentError suffix="error" />
+      <ComponentData suffix="data" />
     </div>
   );
 }
